@@ -23,3 +23,56 @@ Software Requirements:
 
     Visual Studio Code
         https://code.visualstudio.com/
+
+Why Go?
+    1. Simplicity
+        25 keywords
+            a. No access modifiers
+            b. No classes (only structs)
+            c. No inheritance (only composition)
+            d. No Exceptions (only errors)
+            e. No pointer arithmetic
+            f. No difference between "value" & "reference" types (everything is a value in go)
+        Garbage Collector is included
+
+    2. Performance
+        Equivalent to C
+        Compiled to native instruction set
+
+    3. Concurrency
+        Ability to have more than one "execution path"
+        Language is built for concurrency
+            go, select, range, channel (data type), <- (channel operator)
+        SDK
+            sync package
+            sync/atomic package
+            
+Paradox of Choice
+    Barry Schwartz
+
+Data types
+    bool
+    string
+
+    int
+    int8
+    int16
+    int32
+    int64
+
+    uint
+    uint8
+    uint16
+    uint32
+    uint64
+
+    float32
+    float64
+
+    complex64 (real[float32] + imaginary[float32])
+    complex128 (real[float64] + imaginary[float64])
+
+    byte (alias for uint8)
+    rune (alias for int32)(unicode code point)(character)
+
+    
