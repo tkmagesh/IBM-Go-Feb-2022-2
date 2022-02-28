@@ -1,0 +1,25 @@
+Magesh Kuppan
+    99019-11221
+    tkmagesh77@gmail.com
+
+Schedule:
+    Commence    : 9:30 AM
+    Tea Break   : 11:00 AM (20 mins)
+    Lunch Break : 1:00 PM (1 Hr)
+    Tea Break   : 3:30 PM (20 mins)
+    End         : 5:30 PM
+
+Methodolgy:
+    100% Hands on
+    No Powerpoints
+    At least 50% of the participants should have completed the assignment in order for us to move forward.
+
+Repository:
+    https://github.com/tkmagesh/IBM-Go-Feb-2022-2
+
+Software Requirements:
+    Go Tools
+        golang.org/dl
+
+    Visual Studio Code
+        https://code.visualstudio.com/
