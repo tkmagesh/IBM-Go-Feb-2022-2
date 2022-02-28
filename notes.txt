@@ -33,6 +33,7 @@ Why Go?
             d. No Exceptions (only errors)
             e. No pointer arithmetic
             f. No difference between "value" & "reference" types (everything is a value in go)
+            g. No implicity type conversion
         Garbage Collector is included
 
     2. Performance
@@ -75,4 +76,3 @@ Data types
     byte (alias for uint8)
     rune (alias for int32)(unicode code point)(character)
 
-    

@@ -176,6 +176,15 @@ func main() {
 	)
 
 	fmt.Println("red =", red, "blue =", blue, "green =", green)
+
+	/* Type conversions */
+	var i int16 = 100
+	var j int32
+	j = int32(i)
+	var f float32
+	f = float32(i)
+	fmt.Println("j =", j, "f =", f)
+
 }
 
 func fn() {
