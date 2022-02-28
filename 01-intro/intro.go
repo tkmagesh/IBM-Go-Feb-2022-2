@@ -175,7 +175,8 @@ func main() {
 		green
 	)
 
-	fmt.Println("red =", red, "blue =", blue, "green =", green)
+	//fmt.Println("red =", red, "blue =", blue, "green =", green)
+	fmt.Printf("red = %d, blue = %d, green = %d\n", red, blue, green)
 
 	/* Type conversions */
 	var i int16 = 100
@@ -183,7 +184,8 @@ func main() {
 	j = int32(i)
 	var f float32
 	f = float32(i)
-	fmt.Println("j =", j, "f =", f)
+	//fmt.Println("j =", j, "f =", f)
+	fmt.Printf("j = %d, f = %f\n", j, f)
 
 }
 
