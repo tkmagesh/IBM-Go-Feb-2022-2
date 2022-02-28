@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"os"
 )
 
 func main() {
 	var userChoice int
 	var n1, n2, result int
+LOOP:
 	for {
 		fmt.Println("1. Add")
 		fmt.Println("2. Subtract")
@@ -39,7 +39,7 @@ func main() {
 			result = n1 / n2
 			fmt.Printf("Result = %d\n", result)
 		case 5:
-			os.Exit(0)
+			break LOOP
 		default:
 			fmt.Println("Invalid choice")
 		}
