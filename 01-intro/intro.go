@@ -140,6 +140,42 @@ func main() {
 	result := x + y
 	fmt.Println(x, y, str, result)
 
+	/* Constants */
+	const z int = 100
+
+	/* iota  (represents integer value from 0 by default) */
+	/*
+		const (
+			red   = iota
+			blue  = iota
+			green = iota
+		)
+	*/
+
+	/*
+		const (
+			red = iota
+			blue
+			green
+		)
+	*/
+
+	/*
+		const (
+			red = iota + 4
+			blue
+			green
+		)
+	*/
+
+	const (
+		red = iota + 4
+		blue
+		_
+		green
+	)
+
+	fmt.Println("red =", red, "blue =", blue, "green =", green)
 }
 
 func fn() {
