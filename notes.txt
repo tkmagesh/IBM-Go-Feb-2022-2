@@ -102,3 +102,7 @@ Assignment:04
 
 Functions
     anonymous function
+    Higher order functions (functions can be treated like data)
+        1. assign functions to variables
+        2. pass functions as arguments to other functions
+        3. return functions from other functions
