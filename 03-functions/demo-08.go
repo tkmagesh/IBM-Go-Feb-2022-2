@@ -5,9 +5,12 @@ package main
 import "fmt"
 
 func main() {
-	defer func() {
-		fmt.Println("[main] - deferred")
-	}()
+	/*
+		defer func() {
+			fmt.Println("[main] - deferred")
+		}()
+	*/
+	defer fmt.Println("[main] - deferred")
 	fmt.Println("main started")
 	result := f1()
 	fmt.Println("f1 Result =", result)
@@ -34,9 +37,11 @@ func f1() (result int) {
 }
 
 func f2() {
-	defer func() {
-		fmt.Println("[f2] - deferred")
-	}()
+	defer deferredF2()
 	fmt.Println("f2 started")
 	fmt.Println("f2 completed")
+}
+
+func deferredF2() {
+	fmt.Println("[f2] - deferred")
 }
