@@ -99,3 +99,6 @@ If the user enters any other choice
 
 Assignment:04
     Write a function that will return the count of prime numbers from the list of arguments.
+
+Functions
+    anonymous function
