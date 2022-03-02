@@ -96,3 +96,6 @@ if the user choice is 5
 If the user enters any other choice 
     display "Invalid choice" 
     display the menu again.
+
+Assignment:04
+    Write a function that will return the count of prime numbers from the list of arguments.
