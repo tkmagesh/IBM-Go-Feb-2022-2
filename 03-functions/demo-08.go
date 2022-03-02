@@ -14,15 +14,18 @@ func main() {
 	fmt.Println("main completed")
 }
 
-func f1() int {
+func f1() (result int) {
 	defer func() {
 		fmt.Println("[f1] - deferred - 1")
+		result = 1000
 	}()
 	defer func() {
 		fmt.Println("[f1] - deferred - 2")
+		result = 2000
 	}()
 	defer func() {
 		fmt.Println("[f1] - deferred - 3")
+		result = 3000
 	}()
 	fmt.Println("f1 started")
 	f2()
