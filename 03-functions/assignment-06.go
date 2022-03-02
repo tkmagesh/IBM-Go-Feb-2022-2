@@ -17,13 +17,26 @@ var DivideByZeroError = errors.New("cannot divide by zero")
 
 func main() {
 	var n1, n2 int
-	var quotient, remainder int
 	for {
 		fmt.Scanln(&n1, &n2)
-		quotient, remainder = divide(n1, n2)
+		quotient, remainder, err := divideClient(n1, n2)
+		if err != nil {
+			fmt.Println(err)
+			continue
+		}
 		fmt.Printf("Result = %d, %d\n", quotient, remainder)
 	}
 
+}
+
+func divideClient(x, y int) (quotient, remainder int, err error) {
+	defer func() {
+		if e := recover(); e != nil {
+			err = errors.New("Divide connot complete")
+		}
+	}()
+	quotient, remainder = divide(x, y)
+	return
 }
 
 func divide(x, y int) (quotient, remainder int) {
