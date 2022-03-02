@@ -114,4 +114,6 @@ Collections
         fixed size typed collection of elements
     Slice
         Varying size typed collection of elements
+
     Map
+        Typed collection of key/value pairs

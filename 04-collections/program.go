@@ -70,5 +70,37 @@ func main() {
 	fmt.Println("products except marker =>", productsExceptMarker)
 
 	/* Maps */
+	fmt.Printf("\nMaps\n")
+	//var productsRank map[string]int = map[string]int{}
+	//var productsRank map[string]int = make(map[string]int)
 
+	//productsRank := map[string]int{"Pen": 1, "Pencil": 5, "Marker": 2}
+	productsRank := map[string]int{
+		"Pen":    1,
+		"Pencil": 5,
+		"Marker": 2,
+	}
+	fmt.Printf("%#v\n", productsRank)
+
+	//Adding a new item to a map
+	productsRank["Scribble-pad"] = 3
+	fmt.Printf("After adding 1 item, productRanks = %#v\n", productsRank)
+
+	//check if an item exists
+	keyToCheck := "Phone"
+	if val, exists := productsRank[keyToCheck]; exists {
+		fmt.Printf("Value of key %q is %v\n", keyToCheck, val)
+	} else {
+		fmt.Printf("key %q does not exist\n", keyToCheck)
+	}
+
+	//remove an item
+	delete(productsRank, "Pen")
+	fmt.Printf("After deleting \"pen\" productsRank : \n%#v\n", productsRank)
+
+	//Iterate a map
+	fmt.Println("Iterating a map")
+	for key, val := range productsRank {
+		fmt.Printf("Key = %q, Value = %d\n", key, val)
+	}
 }
