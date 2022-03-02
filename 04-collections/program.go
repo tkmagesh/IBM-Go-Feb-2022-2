@@ -35,8 +35,10 @@ func main() {
 	fmt.Printf("\nMemory Allocation\n")
 
 	/* preallocation of memory */
-	products = make([]string, 0, 20)
-	fmt.Println(products)
+	/*
+		products = make([]string, 0, 20)
+		fmt.Println(products)
+	*/
 	/*
 		products = append(products, "Pen")
 		fmt.Printf("%v, len=%d, capacity=%d\n", products, len(products), cap(products))
@@ -51,7 +53,22 @@ func main() {
 		fmt.Println(products)
 	*/
 
-	data := make([]int, 5, 20)
-	fmt.Println(data, len(data), cap(data))
+	/* Slicing */
+	products = []string{"Pen", "Pencil", "Marker", "Scribble-Pad", "Mouse", "Charger", "iPad", "Adapter"}
+	/*
+		[lo : hi] => from 'lo' to 'hi-1'
+		[:hi] => from 0 to 'hi-1'
+		[lo :] => from 'lo' to end
+
+	*/
+	fmt.Println("Products =>", products)
+	fmt.Println("products[2:5] =>", products[2:5])
+	fmt.Println("products[:5] =>", products[:5])
+	fmt.Println("products[5:] =>", products[5:])
+
+	productsExceptMarker := append(products[:2], products[3:]...)
+	fmt.Println("products except marker =>", productsExceptMarker)
+
+	/* Maps */
 
 }

@@ -107,3 +107,11 @@ Functions
         2. pass functions as arguments to other functions
         3. return functions from other functions
     Deferred functions
+
+
+Collections
+    Array
+        fixed size typed collection of elements
+    Slice
+        Varying size typed collection of elements
+    Map
