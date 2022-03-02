@@ -106,3 +106,4 @@ Functions
         1. assign functions to variables
         2. pass functions as arguments to other functions
         3. return functions from other functions
+    Deferred functions
