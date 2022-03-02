@@ -13,7 +13,7 @@ func main() {
 		fmt.Println("Cannot divide by zero")
 		return
 	}
-	if err == nil {
+	if err != nil {
 		fmt.Println("Something went wrong!", err)
 		return
 	}
