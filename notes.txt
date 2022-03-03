@@ -134,6 +134,12 @@ Moduarity
     It is advicable to have the "The repo link for the module" as the name of the module
     github.com/tkmagesh/myApp
 
+
+    TO get the go related environment variables 
+        go env
+        go env GOPATH
+
+
     Module commands
         To Create a module
             go mod init <module name>
@@ -145,3 +151,22 @@ Moduarity
 
         To update the mod file with the latest version of the module
             go mod tidy
+
+        To localize the dependencies 
+            go mod vendor
+
+        To know the usage of a module
+            go mod why <module name>
+            ex :
+                go mod why github.com/fatih/color
+                
+        go mod command documentation
+            https://go.dev/ref/mod
+
+    To run the application
+        go run .
+
+    To create a build
+        go build .
+        go build -o <binary name> .
+        
