@@ -137,5 +137,11 @@ Moduarity
     Module commands
         To Create a module
             go mod init <module name>
-
             
+        To install a 3rd party module
+            go get <module name>
+            ex:
+                go get github.com/fatih/color
+
+        To update the mod file with the latest version of the module
+            go mod tidy
