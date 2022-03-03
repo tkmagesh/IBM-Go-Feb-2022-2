@@ -103,4 +103,17 @@ func main() {
 	for key, val := range productsRank {
 		fmt.Printf("Key = %q, Value = %d\n", key, val)
 	}
+
+	n1 := [5]int{3, 1, 4, 2, 5}
+	/* n2 := [5]int{3, 1, 4, 2, 5}
+	if n1 == n2 {
+		fmt.Println("n1 and n2 are equal")
+	} else {
+		fmt.Println("n1 and n2 are not equal")
+	} */
+	n2 := n1
+	n2[0] = 100
+	fmt.Println("n1 => ", n1)
+	fmt.Println("n2 => ", n2)
+
 }
