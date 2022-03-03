@@ -1,5 +1,7 @@
 package calculator
 
-func Add(x, y int) int {
-	return x + y
+var opcount int
+
+func OpCount() int {
+	return opcount
 }
