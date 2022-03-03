@@ -117,3 +117,25 @@ Collections
 
     Map
         Typed collection of key/value pairs
+
+
+Moduarity
+    Modules & Packages
+
+    Module file => go.mod
+        name
+        go runtime version
+        dependencies
+
+    A Module can have many packages
+    Packages can be nested
+    Packages are nothing but folders
+
+    It is advicable to have the "The repo link for the module" as the name of the module
+    github.com/tkmagesh/myApp
+
+    Module commands
+        To Create a module
+            go mod init <module name>
+
+            
