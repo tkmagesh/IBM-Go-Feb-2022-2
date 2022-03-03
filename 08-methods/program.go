@@ -25,9 +25,9 @@ func main() {
 		ApplyDiscount(&pen, 10)
 	*/
 
-	fmt.Println(pen.Format())
+	fmt.Println(pen)
 	pen.ApplyDiscount(10)
-	fmt.Println(pen.Format())
+	fmt.Println(pen)
 
 	pencilPtr := &models.Product{
 		Id:       200,
@@ -37,9 +37,17 @@ func main() {
 		Category: "Stationary",
 	}
 
-	fmt.Println(pencilPtr.Format())
+	/*
+		fmt.Println(pencilPtr.Format())
+		pencilPtr.ApplyDiscount(10)
+		fmt.Println(pencilPtr.Format())
+		fmt.Println(pencilPtr.WhoAmI())
+	*/
+
+	/* fmt.Print functions use the String() method automatically */
+	fmt.Println(pencilPtr)
 	pencilPtr.ApplyDiscount(10)
-	fmt.Println(pencilPtr.Format())
+	fmt.Println(pencilPtr)
 	fmt.Println(pencilPtr.WhoAmI())
 	/* compostion */
 	/* grapes := models.PerishableProduct{
@@ -48,9 +56,9 @@ func main() {
 	} */
 	grapes := models.NewPerishableProduct(200, "Grapes", 50, 20, "Fruits", "2 Days")
 
-	fmt.Println(grapes.Format())
+	fmt.Println(grapes)
 	grapes.ApplyDiscount(10)
-	fmt.Println(grapes.Format())
+	fmt.Println(grapes)
 
 	/*
 		grapes := PerishableProduct{

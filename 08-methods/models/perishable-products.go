@@ -8,8 +8,13 @@ type PerishableProduct struct {
 }
 
 //overriding the Format method
-func (pp PerishableProduct) Format() string {
+/* func (pp PerishableProduct) Format() string {
 	return fmt.Sprintf("%s, Expiry=%s", pp.Product.Format(), pp.Expiry)
+} */
+
+/* Implementation of the fmt.Stringer interface */
+func (pp PerishableProduct) String() string {
+	return fmt.Sprintf("%v, Expiry=%s", pp.Product, pp.Expiry)
 }
 
 func NewPerishableProduct(id int, name string, cost float32, units int, category string, expiry string) *PerishableProduct {
