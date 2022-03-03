@@ -37,8 +37,10 @@ func main() {
 	}
 	fmt.Println("Employees")
 	for _, emp := range employees {
-		fmt.Printf("%#v\n", emp)
+		fmt.Print(Format(&emp))
 	}
 }
 
-/* Write a Print function that takes an "Employee Pointer" and Prints all the attribute values */
+func Format(emp *Employee) string {
+	return fmt.Sprintf("Id=%d, FirstName=%s, LastName=%s, Salary=%f\n", emp.Id, emp.FirstName, emp.LastName, emp.Salary)
+}
