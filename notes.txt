@@ -187,3 +187,6 @@ Assignment:09
     FulltimeEmployee will have a "Benefits" field
 
 Methods can be created in the same package where the struct is defined
+
+Interfaces
+    interfaces are implemented IMPLICITLY
