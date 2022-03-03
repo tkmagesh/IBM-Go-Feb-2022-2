@@ -185,3 +185,5 @@ Assignment:08
 Assignment:09
     Create a FulltimeEmployee type composing the Employee type
     FulltimeEmployee will have a "Benefits" field
+
+Methods can be created in the same package where the struct is defined

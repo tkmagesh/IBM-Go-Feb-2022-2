@@ -1,36 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"methods-demo/models"
+)
 
-type Product struct {
-	Id       int
-	Name     string
-	Cost     float32
-	Units    int
-	Category string
-}
+type MyStr string //alias for the string
 
-func (p Product) Format() string {
-	return fmt.Sprintf("Id=%d, Name=%s, Cost=%f, Units=%d, Category=%s", p.Id, p.Name, p.Cost, p.Units, p.Category)
-}
-
-func (p *Product) ApplyDiscount(discountPercentage float32) {
-	p.Cost = p.Cost * ((100 - discountPercentage) / 100)
-}
-
-type PerishableProduct struct {
-	Product //composition
-	Expiry  string
-}
-
-//overriding the Format method
-func (pp PerishableProduct) Format() string {
-	return fmt.Sprintf("%s, Expiry=%s", pp.Product.Format(), pp.Expiry)
+func (s MyStr) Length() int {
+	return len(s)
 }
 
 func main() {
 
-	pen := Product{100, "Pen", 10, 100, "Stationary"}
+	pen := models.Product{
+		Id:       100,
+		Name:     "Pen",
+		Cost:     10,
+		Units:    100,
+		Category: "Stationary",
+	}
 	/*
 		fmt.Println(Format(pen))
 		ApplyDiscount(&pen, 10)
@@ -40,16 +29,24 @@ func main() {
 	pen.ApplyDiscount(10)
 	fmt.Println(pen.Format())
 
-	pencilPtr := &Product{200, "Pencil", 1, 500, "Stationary"}
+	pencilPtr := &models.Product{
+		Id:       200,
+		Name:     "Pencil",
+		Cost:     1,
+		Units:    500,
+		Category: "Stationary",
+	}
+
 	fmt.Println(pencilPtr.Format())
 	pencilPtr.ApplyDiscount(10)
 	fmt.Println(pencilPtr.Format())
-
+	fmt.Println(pencilPtr.WhoAmI())
 	/* compostion */
-	grapes := PerishableProduct{
-		Product{200, "Grapes", 50, 25, "Fruits"},
+	/* grapes := models.PerishableProduct{
+		models.Product{200, "Grapes", 50, 25, "Fruits"},
 		"2 Days",
-	}
+	} */
+	grapes := models.NewPerishableProduct(200, "Grapes", 50, 20, "Fruits", "2 Days")
 
 	fmt.Println(grapes.Format())
 	grapes.ApplyDiscount(10)
@@ -69,4 +66,7 @@ func main() {
 		fmt.Println("After applying 10% discount")
 		fmt.Println(Format(grapes.Product))
 	*/
+
+	var s MyStr = MyStr("This is a sample string")
+	fmt.Println(s.Length())
 }
