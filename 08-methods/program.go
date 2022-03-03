@@ -18,10 +18,15 @@ func (p *Product) ApplyDiscount(discountPercentage float32) {
 	p.Cost = p.Cost * ((100 - discountPercentage) / 100)
 }
 
-/* type PerishableProduct struct {
+type PerishableProduct struct {
 	Product //composition
 	Expiry  string
-} */
+}
+
+//overriding the Format method
+func (pp PerishableProduct) Format() string {
+	return fmt.Sprintf("%s, Expiry=%s", pp.Product.Format(), pp.Expiry)
+}
 
 func main() {
 
@@ -39,6 +44,16 @@ func main() {
 	fmt.Println(pencilPtr.Format())
 	pencilPtr.ApplyDiscount(10)
 	fmt.Println(pencilPtr.Format())
+
+	/* compostion */
+	grapes := PerishableProduct{
+		Product{200, "Grapes", 50, 25, "Fruits"},
+		"2 Days",
+	}
+
+	fmt.Println(grapes.Format())
+	grapes.ApplyDiscount(10)
+	fmt.Println(grapes.Format())
 
 	/*
 		grapes := PerishableProduct{
