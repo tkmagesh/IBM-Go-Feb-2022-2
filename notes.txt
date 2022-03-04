@@ -190,3 +190,16 @@ Methods can be created in the same package where the struct is defined
 
 Interfaces
     interfaces are implemented IMPLICITLY
+
+Concurrency
+    Never assume the time taken for a function to complete
+    Never assume the order of execution of functions
+
+    WaitGroup (sync package)
+        counter
+        initialize the counter
+            using - .Add()
+        Block the execution of the function until the counter becomes 0
+            using - .Wait()
+        Decrement the counter
+            using - .Done()

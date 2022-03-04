@@ -14,6 +14,7 @@ func main() {
 }
 
 func f1() {
+	time.Sleep(1 * time.Second)
 	fmt.Println("f1 invoked")
 }
 
