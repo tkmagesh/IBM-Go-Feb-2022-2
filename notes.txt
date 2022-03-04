@@ -245,4 +245,15 @@ IO
 JSON
     encoding/json
 
+Command Line applications
+    https://github.com/spf13/cobra
+
+Awesome Go
+    https://github.com/avelino/awesome-go
+
+To know the OS build choices
+    go tool dist list
+
+To create a build for windows (example)
+    GOOS=windows GOARCH=386 go build -o <binary name> .
         
