@@ -203,3 +203,6 @@ Concurrency
             using - .Wait()
         Decrement the counter
             using - .Done()
+
+    To detect race conditions
+        go run --race demo-04.go

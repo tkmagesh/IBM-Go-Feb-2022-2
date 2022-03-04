@@ -3,8 +3,10 @@ package main
 import (
 	"fmt"
 	"sync"
-	"time"
 )
+
+var opCount int
+var mutex sync.Mutex
 
 func main() {
 	wg := &sync.WaitGroup{}
@@ -16,10 +18,15 @@ func main() {
 	f2()
 	wg.Wait()
 	fmt.Println("main completed")
+	fmt.Println("OpCount = ", opCount)
 }
 
 func f1(no int, wg *sync.WaitGroup) {
-	time.Sleep(5 * time.Second)
+	mutex.Lock()
+	{
+		opCount++
+	}
+	mutex.Unlock()
 	fmt.Printf("f1[%d] invoked\n", no)
 	wg.Done()
 }
