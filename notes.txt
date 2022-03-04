@@ -223,3 +223,26 @@ Concurrency
             Channel Read operation is ALWAYS a blocking operation
             Channel Write operation is a blocking operation (conditions apply)
                 A write operation can succeed only if a Read operation is initiated
+
+IO
+    Reader
+    Writer
+    Closer
+    Seeker
+
+    ioutil
+        file reading
+        file writing
+
+    bufio
+        read line
+        buffered reading and writing
+
+    os
+        file related operations
+            creating, opening, deleting
+
+JSON
+    encoding/json
+
+        
