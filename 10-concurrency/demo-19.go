@@ -10,9 +10,7 @@ func main() {
 	done := make(chan bool)
 	ch := genEvenNos(done)
 	go func() {
-		var input string
-		fmt.Println("Hit ENTER to stop...")
-		fmt.Scanln(&input)
+		time.Sleep(10 * time.Second)
 		done <- true
 	}()
 	for evenNo := range ch {

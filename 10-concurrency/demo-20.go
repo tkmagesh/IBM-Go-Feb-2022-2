@@ -7,21 +7,15 @@ import (
 
 //consumer
 func main() {
-	done := make(chan bool)
+	done := time.After(10 * time.Second)
 	ch := genEvenNos(done)
-	go func() {
-		var input string
-		fmt.Println("Hit ENTER to stop...")
-		fmt.Scanln(&input)
-		done <- true
-	}()
 	for evenNo := range ch {
 		fmt.Println("even number =", evenNo)
 	}
 }
 
 //producer
-func genEvenNos(done <-chan bool) <-chan int /* receive only channel */ {
+func genEvenNos(done <-chan time.Time) <-chan int /* receive only channel */ {
 	resultCh := make(chan int)
 	go func() {
 		counter := 1
