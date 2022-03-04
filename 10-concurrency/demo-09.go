@@ -13,8 +13,8 @@ func main() {
 	fmt.Println("main started")
 	wg.Add(1)
 	go add(100, 200, resultCh)
-	wg.Wait()
 	result := <-resultCh
+	wg.Wait() //blocked
 	fmt.Println("result = ", result)
 	fmt.Println("main completed")
 }
