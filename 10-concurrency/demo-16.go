@@ -14,9 +14,7 @@ func main() {
 }
 
 func getNos() chan int {
-
 	noCh := make(chan int)
-
 	go func() {
 		wg := sync.WaitGroup{}
 		wg.Add(2)
